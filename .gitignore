@@ -1,0 +1,8 @@
+# Directories
+/eclipse/.metadata/
+**/bin/
+/conf/
+/docs/
+/reobf/
+/jars/
+/temp/
