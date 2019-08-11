@@ -1,9 +1,11 @@
 package com.troy.Exporter;
 
+import java.io.File;
+
 public class Main
 {
-	public static void main(String[] args)
+	public static void main(String[] args) throws Exception
 	{
-		downloadFile
+		Utils.downloadFile(new File("test.html"), "http://www.google.com");
 	}
 }

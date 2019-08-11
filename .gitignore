@@ -1,5 +1,6 @@
 # Directories
 /eclipse/.metadata/
+/eclipse/Exporter/work/
 **/bin/
 /conf/
 /docs/
