@@ -14,6 +14,7 @@ INFO: Copying com/troy/client/BlockScanner.class
 INFO: Copying com/troy/client/CaneFarm$1.class
 INFO: Copying com/troy/client/CaneFarm$2.class
 INFO: Copying com/troy/client/CaneFarm$3.class
+INFO: Copying com/troy/client/CaneFarm$MoveState.class
 INFO: Copying com/troy/client/CaneFarm.class
 INFO: Copying com/troy/client/Module.class
 INFO: Copying com/troy/client/MovementController.class
@@ -630,7 +631,7 @@ INFO: Processed 1208 -> 1208
 INFO: Processing net/minecraft/client/Minecraft.class
 FINE: Access: net/minecraft/client/Minecraft/access$100(Lnet/minecraft/client/Minecraft;)Lnet/minecraft/client/resources/LanguageManager; [GETFIELD net/minecraft/client/Minecraft/mcLanguageManager Lnet/minecraft/client/resources/LanguageManager;]
 FINE: Access: net/minecraft/client/Minecraft/access$000(Lnet/minecraft/client/Minecraft;)Ljava/lang/String; [GETFIELD net/minecraft/client/Minecraft/launchedVersion Ljava/lang/String;]
-INFO: Processed 92565 -> 92413
+INFO: Processed 92566 -> 92414
 INFO: Processing net/minecraft/client/audio/GuardianSound.class
 INFO: Processed 1535 -> 1535
 INFO: Processing net/minecraft/client/audio/ISound$AttenuationType.class
@@ -2257,7 +2258,7 @@ INFO: Processed 7665 -> 7717
 INFO: Processing net/minecraft/client/settings/GameSettings.class
 INFO: Processed 33259 -> 33385
 INFO: Processing net/minecraft/client/settings/KeyBinding.class
-INFO: Processed 3805 -> 3802
+INFO: Processed 3901 -> 3898
 INFO: Processing net/minecraft/client/shader/Framebuffer.class
 INFO: Processed 6999 -> 6999
 INFO: Processing net/minecraft/client/shader/Shader.class
@@ -4646,7 +4647,7 @@ INFO: Processed 1263 -> 1263
 INFO: Processing net/minecraft/world/World$4.class
 INFO: Processed 1101 -> 1101
 INFO: Processing net/minecraft/world/World.class
-INFO: Processed 80514 -> 80476
+INFO: Processed 80506 -> 80468
 INFO: Processing net/minecraft/world/WorldManager.class
 INFO: Processed 5580 -> 5571
 INFO: Processing net/minecraft/world/WorldProvider.class

@@ -11,6 +11,7 @@ import org.lwjgl.opengl.Display;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.FontRenderer;
+import net.minecraft.network.play.client.C03PacketPlayer;
 
 public class TroyClient implements Tickable, MovementController
 {
@@ -72,9 +73,13 @@ public class TroyClient implements Tickable, MovementController
 			if (it.next().isFinished()) it.remove();
 
 		}
-
-		if (isControllingPitch()) mc.thePlayer.rotationPitch = getPitch();
-		if (isControllingYaw()) mc.thePlayer.rotationYaw = getYaw();
+		boolean pitch = isControllingPitch(), yaw = isControllingYaw();
+		if (pitch) mc.thePlayer.rotationPitch = getPitch();
+		if (yaw) mc.thePlayer.rotationYaw = getYaw();
+		if (pitch || yaw)
+		{
+			mc.thePlayer.sendQueue.addToSendQueue(new C03PacketPlayer.C05PacketPlayerLook(mc.thePlayer.rotationYaw, mc.thePlayer.rotationPitch, mc.thePlayer.onGround));
+		}
 	}
 
 	@Override
@@ -89,7 +94,8 @@ public class TroyClient implements Tickable, MovementController
 		}
 	}
 
-	public void renderText(FontRenderer renderer)
+	@Override
+	public void onGUIRender(FontRenderer renderer)
 	{
 		int y = 0;
 		renderer.drawString("Troy Client", 2, y, 0);
@@ -98,6 +104,8 @@ public class TroyClient implements Tickable, MovementController
 			y += renderer.FONT_HEIGHT + 2;
 
 			renderer.drawString(module.getName() + " (" + Keyboard.getKeyName(module.getKey()) + ")", 2, y, module.isEnabled() ? 0x10ff00 : 0xff0000);
+			if(module.isEnabled())
+				module.onGUIRender(renderer);
 		}
 	}
 

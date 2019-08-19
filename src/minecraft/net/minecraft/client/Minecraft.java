@@ -1053,7 +1053,7 @@ public class Minecraft implements IThreadListener, IPlayerUsage {
 			this.prevFrameTime = System.nanoTime();
 		}
 		if (this.theWorld != null)
-			client.renderText(fontRendererObj);
+			client.onGUIRender(fontRendererObj);
 
 		this.guiAchievement.updateAchievementWindow();
 		this.framebufferMc.unbindFramebuffer();
